@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  background: rgba(44, 47, 72, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  width: 550px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* Input section */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  background: #1e293b;
+  border-radius: 100px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 20px;
+  border-radius: 80px;
+  border: none;
+  font-size: 16px;
+  background: #1e293b;
+  color: white;
+  transition: 0.3s;
+}
+
+#taskInput:focus {
+  border: 1px solid #38bdf8;
+  box-shadow: 0 0 5px #38bdf8;
+  outline: none;
+}
+
+/* Error message */
+.error-msg {
+  color: #f87171;
+  margin-top: 5px;
+  text-align: center;
+  display: none;
+  font-size: 16px;
+  font-weight: 500;
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+/* Task list */
+#taskList {
+  margin-top: 20px;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.task-item {
+  background-color: #1e293b;
+  padding: 10px 10px 10px 30px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.task-text {
+  flex: 1;
+  margin-right: 10px;
+  word-break: break-word;
+  width: 50%;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+  color: white;
+  background: #10141a;
+  transition: 0.3s;
+}
+.task-actions {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Rainbow glowing button style */
+button {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80);
+  background-size: 800% 800%;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: rainbowFlow 6s ease infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 0 10px #f472b6;
+}
+
+/* Scrollbar styling for task list */
+#taskList::-webkit-scrollbar {
+  width: 6px;
+}
+#taskList::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 5px;
+}
+
+/* Animations */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes rainbowFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
